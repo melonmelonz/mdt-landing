@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288 72" fill="none" role="img" aria-label="MDT — Maud'dib Tek">
+  <title>MDT — Maud'dib Tek</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&amp;family=JetBrains+Mono:wght@400&amp;display=swap');
+    </style>
+    <filter id="spice-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ══ DIAMOND MARK ══ -->
+  <!-- Outer diamond -->
+  <polygon
+    points="36,4 68,36 36,68 4,36"
+    stroke="#C9A96E" stroke-width="1.5"/>
+
+  <!-- Internal cross — faint grid -->
+  <line x1="4"  y1="36" x2="68" y2="36" stroke="#C9A96E" stroke-width="0.7" opacity="0.28"/>
+  <line x1="36" y1="4"  x2="36" y2="68" stroke="#C9A96E" stroke-width="0.7" opacity="0.28"/>
+
+  <!-- Spice fill: top-right quadrant -->
+  <polygon points="36,4 68,36 36,36" fill="#6527A0" opacity="0.82"/>
+
+  <!-- Apex node (spice glow) -->
+  <circle cx="36" cy="4" r="3" fill="#A855F7" filter="url(#spice-glow)"/>
+  <circle cx="36" cy="4" r="1.8" fill="#D8B4FE"/>
+
+  <!-- Edge midpoint nodes — network reads -->
+  <circle cx="4"  cy="36" r="1.5" fill="#C9A96E" opacity="0.5"/>
+  <circle cx="68" cy="36" r="1.5" fill="#C9A96E" opacity="0.5"/>
+  <circle cx="36" cy="68" r="1.5" fill="#C9A96E" opacity="0.5"/>
+
+  <!-- ══ VERTICAL RULE ══ -->
+  <line x1="84" y1="14" x2="84" y2="58" stroke="#3D2E1E" stroke-width="1"/>
+
+  <!-- ══ WORDMARK ══ -->
+  <text
+    x="96" y="47"
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-size="41" font-weight="300"
+    fill="#C9A96E" letter-spacing="6">MDT</text>
+
+  <text
+    x="98" y="62"
+    font-family="'JetBrains Mono', 'Courier New', monospace"
+    font-size="7.5" font-weight="400"
+    fill="#6B5033" letter-spacing="3.8">MAUD&apos;DIB TEK</text>
+</svg>
