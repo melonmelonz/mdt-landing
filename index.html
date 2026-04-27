@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MDT — Maud'dib Tek. Cloud, Linux, and network engineering consultants. The network must flow.">
+  <title>MDT — Maud'dib Tek</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <canvas id="sand-canvas" aria-hidden="true"></canvas>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="MDT home">
+        <span class="logo-mdt">MDT</span>
+        <span class="logo-rule"></span>
+        <span class="logo-full">Maud'dib Tek</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Cloud &amp; Network Engineering Consultants</p>
+      <h1 class="hero-title">
+        The Network<br><em>Must Flow.</em>
+      </h1>
+      <p class="hero-sub">
+        Infrastructure built to endure. Systems designed for the long desert crossing.
+      </p>
+      <a href="#contact" class="btn-primary">Engage <span aria-hidden="true">→</span></a>
+    </div>
+
+    <div class="hero-coords" aria-hidden="true">
+      <span class="coord-label">MDT</span>
+      <span class="coord-val">36.4°N · 125.7°E · ARRAKIS SECTOR</span>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <span>scroll</span>
+      <div class="scroll-bar"><div class="scroll-fill"></div></div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" aria-labelledby="services-heading">
+    <div class="section-inner">
+      <p class="section-eyebrow reveal">/ what we do</p>
+      <h2 id="services-heading" class="section-title reveal">Services</h2>
+      <div class="services-grid">
+
+        <article class="service-card reveal">
+          <div class="card-num" aria-hidden="true">01</div>
+          <h3>Cloud &amp; Linux Infrastructure</h3>
+          <p>
+            AWS architecture, multi-account strategy, IAM, networking, and battle-tested
+            Linux systems administration. We build and migrate cloud environments that scale.
+          </p>
+          <ul class="tag-list" aria-label="Technologies">
+            <li>AWS</li><li>Linux</li><li>KVM</li><li>VPC</li><li>IAM</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="card-num" aria-hidden="true">02</div>
+          <h3>Automation &amp; CI/CD</h3>
+          <p>
+            End-to-end deployment pipelines, infrastructure as code, and GitOps workflows.
+            From commit to production — automated, tested, and observable.
+          </p>
+          <ul class="tag-list" aria-label="Technologies">
+            <li>Terraform</li><li>Ansible</li><li>GitHub Actions</li><li>ArgoCD</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="card-num" aria-hidden="true">03</div>
+          <h3>Full-Stack Engineering</h3>
+          <p>
+            Applications, APIs, and the infrastructure layer beneath them — designed together.
+            We build systems that are fast, maintainable, and production-ready from day one.
+          </p>
+          <ul class="tag-list" aria-label="Technologies">
+            <li>Node</li><li>Python</li><li>React</li><li>PostgreSQL</li><li>Docker</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Approach -->
+  <section id="approach" aria-labelledby="approach-heading">
+    <div class="section-inner">
+      <div class="approach-quote reveal" aria-label="Company philosophy">
+        <span class="quote-glyph" aria-hidden="true">"</span>
+        <blockquote>
+          The Fremen do not fear the desert — they know it.<br>
+          We do not fear complexity. We master it.
+        </blockquote>
+      </div>
+
+      <div class="approach-pillars">
+        <div class="pillar reveal">
+          <span class="pillar-mark" aria-hidden="true">◈</span>
+          <h3>Precision First</h3>
+          <p>Deliberate design, rigorous testing, no shortcuts to production. We measure twice.</p>
+        </div>
+        <div class="pillar reveal">
+          <span class="pillar-mark" aria-hidden="true">◈</span>
+          <h3>Shaped to Your Terrain</h3>
+          <p>Solutions built around your constraints and goals — not templated assumptions.</p>
+        </div>
+        <div class="pillar reveal">
+          <span class="pillar-mark" aria-hidden="true">◈</span>
+          <h3>Built to Endure</h3>
+          <p>Standards-based, documented infrastructure that outlasts trends and survives staff turnover.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stack -->
+  <section id="stack" aria-labelledby="stack-heading">
+    <div class="section-inner">
+      <p class="section-eyebrow reveal">/ the arsenal</p>
+      <h2 id="stack-heading" class="section-title reveal">Stack &amp; Expertise</h2>
+      <div class="stack-grid">
+        <div class="stack-row reveal">
+          <span class="stack-cat">Cloud</span>
+          <span class="stack-items">AWS · EC2 · S3 · RDS · Lambda · CloudFront · Route 53 · Cloudflare</span>
+        </div>
+        <div class="stack-row reveal">
+          <span class="stack-cat">Linux &amp; Virt</span>
+          <span class="stack-items">RHEL · Ubuntu · Debian · KVM · QEMU · libvirt · Proxmox</span>
+        </div>
+        <div class="stack-row reveal">
+          <span class="stack-cat">Automation</span>
+          <span class="stack-items">Terraform · Ansible · Pulumi · Packer · GitHub Actions · Jenkins</span>
+        </div>
+        <div class="stack-row reveal">
+          <span class="stack-cat">Containers</span>
+          <span class="stack-items">Docker · Kubernetes · Helm · ArgoCD · Istio · ECR · EKS</span>
+        </div>
+        <div class="stack-row reveal">
+          <span class="stack-cat">Development</span>
+          <span class="stack-items">Python · Node.js · React · FastAPI · PostgreSQL · Redis</span>
+        </div>
+        <div class="stack-row reveal">
+          <span class="stack-cat">Observability</span>
+          <span class="stack-items">Prometheus · Grafana · Loki · OpenTelemetry · Datadog · CloudWatch</span>
+        </div>
+        <div class="stack-row reveal">
+          <span class="stack-cat">Networking</span>
+          <span class="stack-items">BGP · OSPF · VPC Peering · Transit Gateway · SD-WAN · VPN</span>
+        </div>
+        <div class="stack-row reveal">
+          <span class="stack-cat">Security</span>
+          <span class="stack-items">Zero-Trust · SASE · CIS Benchmarks · SOC2 · AWS Security Hub</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="section-inner">
+      <p class="section-eyebrow reveal">/ make contact</p>
+      <h2 id="contact-heading" class="section-title reveal">Begin the Conversation</h2>
+      <p class="contact-sub reveal">
+        Ready to build infrastructure that endures? Let's talk.
+      </p>
+
+      <div class="contact-block reveal">
+        <div class="contact-item">
+          <span class="contact-label">Email</span>
+          <a href="mailto:hello@mauddibtek.com" class="contact-val">hello@mauddibtek.com</a>
+        </div>
+        <div class="contact-divider" aria-hidden="true"></div>
+        <div class="contact-item">
+          <span class="contact-label">Phone</span>
+          <a href="tel:+10000000000" class="contact-val contact-soon">
+            Coming soon
+            <span class="soon-tag">Twilio</span>
+          </a>
+        </div>
+        <div class="contact-divider" aria-hidden="true"></div>
+        <div class="contact-item">
+          <span class="contact-label">Location</span>
+          <span class="contact-val contact-plain">Remote · Available Worldwide</span>
+        </div>
+      </div>
+
+      <div class="contact-links reveal">
+        <a href="#" class="contact-link" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" class="contact-link" aria-label="GitHub">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">MDT</span>
+      <span class="footer-copy">© 2026 Maud'dib Tek. All rights reserved.</span>
+      <span class="footer-tag" aria-hidden="true">The network must flow.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
