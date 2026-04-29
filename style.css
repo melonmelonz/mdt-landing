@@ -36,7 +36,7 @@
   --accent-glow:  var(--spice-glow);
 
   /* Typography */
-  --serif:  'Cormorant Garamond', 'Georgia', serif;
+  --serif:  'Cinzel', 'Georgia', serif;
   --sans:   'Inter', system-ui, sans-serif;
   --mono:   'JetBrains Mono', 'Courier New', monospace;
 
@@ -195,9 +195,9 @@ body::after {
 }
 
 .hero-title em {
-  font-family: 'Cinzel', serif;
-  font-style: normal;
-  font-weight: 900;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
   color: var(--sand-06);
   text-shadow: 0 0 60px rgba(201, 169, 110, 0.25);
 }
@@ -452,7 +452,7 @@ body::after {
 }
 
 blockquote {
-  font-family: var(--serif);
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.2rem, 2.5vw, 1.65rem);
   font-style: italic;
   font-weight: 300;
