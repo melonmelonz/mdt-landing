@@ -205,8 +205,24 @@ body::after {
   font-size: clamp(3.8rem, 12vw, 10.5rem);
   font-weight: 900;
   letter-spacing: -0.02em;
-  color: var(--text-hi);
-  text-shadow: 0 0 80px rgba(168, 85, 247, 0.18);
+  background: linear-gradient(
+    90deg,
+    var(--sand-06) 0%,
+    var(--sand-07) 30%,
+    var(--sand-09) 50%,
+    var(--sand-07) 70%,
+    var(--sand-06) 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: flow-shimmer 5s linear infinite;
+}
+
+@keyframes flow-shimmer {
+  0%   { background-position: 0% center; }
+  100% { background-position: 250% center; }
 }
 
 .hero-sub {
