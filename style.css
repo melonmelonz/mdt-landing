@@ -36,9 +36,10 @@
   --accent-glow:  var(--spice-glow);
 
   /* Typography */
-  --serif:  'Cormorant Garamond', 'Georgia', serif;
-  --sans:   'Inter', system-ui, sans-serif;
-  --mono:   'JetBrains Mono', 'Courier New', monospace;
+  --serif:        'Cinzel', 'Georgia', serif;
+  --serif-italic: 'Cormorant Garamond', 'Georgia', serif;
+  --sans:         'Inter', system-ui, sans-serif;
+  --mono:         'JetBrains Mono', 'Courier New', monospace;
 
   /* Spacing */
   --gutter: clamp(1.5rem, 5vw, 3rem);
@@ -176,7 +177,7 @@ body::after {
   font-size: 0.68rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--spice-mid);
+  color: var(--spice-glow);
   margin-bottom: 2rem;
   opacity: 0;
   animation: fade-up 0.7s ease 0.2s forwards;
@@ -184,20 +185,28 @@ body::after {
 
 .hero-title {
   font-family: var(--serif);
-  font-size: clamp(3.25rem, 9vw, 7.5rem);
-  font-weight: 300;
-  line-height: 1.0;
-  letter-spacing: -0.01em;
-  color: var(--text-hi);
-  margin-bottom: 2rem;
+  line-height: 0.95;
+  margin-bottom: 2.5rem;
   opacity: 0;
   animation: fade-up 0.7s ease 0.4s forwards;
 }
 
-.hero-title em {
-  font-style: italic;
-  color: var(--sand-06);
-  text-shadow: 0 0 60px rgba(201, 169, 110, 0.25);
+.title-sup {
+  display: block;
+  font-size: clamp(1.4rem, 4.5vw, 3.5rem);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: var(--text-mid);
+  margin-bottom: 0.15em;
+}
+
+.title-main {
+  display: block;
+  font-size: clamp(3.8rem, 12vw, 10.5rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--text-hi);
+  text-shadow: 0 0 80px rgba(168, 85, 247, 0.18);
 }
 
 .hero-sub {
@@ -212,24 +221,47 @@ body::after {
 .btn-primary {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.75rem;
   font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.2em;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--sand-06);
-  border: 1px solid rgba(201, 169, 110, 0.35);
-  padding: 0.9rem 1.8rem;
-  transition: background 0.25s, border-color 0.25s, box-shadow 0.25s, gap 0.2s;
+  position: relative;
+  padding: 0.65rem 0;
   opacity: 0;
   animation: fade-up 0.7s ease 0.8s forwards;
+  transition: color 0.25s, gap 0.2s;
+}
+
+.btn-primary::before,
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  height: 1px;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary::before {
+  top: 0;
+  background: rgba(201, 169, 110, 0.3);
+}
+
+.btn-primary::after {
+  bottom: 0;
+  background: rgba(201, 169, 110, 0.3);
 }
 
 .btn-primary:hover {
-  background: rgba(201, 169, 110, 0.07);
-  border-color: rgba(201, 169, 110, 0.6);
-  box-shadow: 0 0 24px rgba(201, 169, 110, 0.08);
-  gap: 0.9rem;
+  color: var(--sand-08);
+  gap: 1.1rem;
+}
+
+.btn-primary:hover::before,
+.btn-primary:hover::after {
+  background: var(--spice-glow);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.35);
 }
 
 /* Hero coordinates */
@@ -290,7 +322,7 @@ body::after {
 .scroll-fill {
   width: 100%;
   height: 100%;
-  background: var(--sand-05);
+  background: var(--spice-mid);
   transform: translateX(-100%);
   animation: scan 2.5s ease-in-out infinite 2s;
 }
@@ -363,11 +395,12 @@ body::after {
 
 .service-card h3 {
   font-family: var(--serif);
-  font-size: 1.4rem;
-  font-weight: 400;
+  font-size: 1.35rem;
+  font-weight: 600;
   color: var(--text-hi);
   margin-bottom: 1rem;
   line-height: 1.2;
+  letter-spacing: 0.04em;
 }
 
 .service-card p {
@@ -427,7 +460,7 @@ body::after {
 }
 
 blockquote {
-  font-family: var(--serif);
+  font-family: var(--serif-italic);
   font-size: clamp(1.2rem, 2.5vw, 1.65rem);
   font-style: italic;
   font-weight: 300;
