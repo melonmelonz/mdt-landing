@@ -36,10 +36,9 @@
   --accent-glow:  var(--spice-glow);
 
   /* Typography */
-  --serif:        'Cinzel', 'Georgia', serif;
-  --serif-italic: 'Cormorant Garamond', 'Georgia', serif;
-  --sans:         'Inter', system-ui, sans-serif;
-  --mono:         'JetBrains Mono', 'Courier New', monospace;
+  --serif:  'Cormorant Garamond', 'Georgia', serif;
+  --sans:   'Inter', system-ui, sans-serif;
+  --mono:   'JetBrains Mono', 'Courier New', monospace;
 
   /* Spacing */
   --gutter: clamp(1.5rem, 5vw, 3rem);
@@ -185,27 +184,22 @@ body::after {
 
 .hero-title {
   font-family: var(--serif);
-  line-height: 0.95;
-  margin-bottom: 2.5rem;
+  font-size: clamp(3.25rem, 9vw, 7.5rem);
+  font-weight: 300;
+  line-height: 1.0;
+  letter-spacing: -0.01em;
+  color: var(--text-hi);
+  margin-bottom: 2rem;
   opacity: 0;
   animation: fade-up 0.7s ease 0.4s forwards;
 }
 
-.title-sup {
-  display: block;
-  font-size: clamp(1.4rem, 4.5vw, 3.5rem);
-  font-weight: 400;
-  letter-spacing: 0.12em;
-  color: var(--text-mid);
-  margin-bottom: 0.15em;
-}
-
-.title-main {
-  display: block;
-  font-size: clamp(3.8rem, 12vw, 10.5rem);
+.hero-title em {
+  font-family: 'Cinzel', serif;
+  font-style: normal;
   font-weight: 900;
-  letter-spacing: -0.02em;
-  color: var(--text-hi);
+  color: var(--sand-06);
+  text-shadow: 0 0 60px rgba(201, 169, 110, 0.25);
 }
 
 .hero-sub {
@@ -394,12 +388,11 @@ body::after {
 
 .service-card h3 {
   font-family: var(--serif);
-  font-size: 1.35rem;
-  font-weight: 600;
+  font-size: 1.4rem;
+  font-weight: 400;
   color: var(--text-hi);
   margin-bottom: 1rem;
   line-height: 1.2;
-  letter-spacing: 0.04em;
 }
 
 .service-card p {
@@ -459,7 +452,7 @@ body::after {
 }
 
 blockquote {
-  font-family: var(--serif-italic);
+  font-family: var(--serif);
   font-size: clamp(1.2rem, 2.5vw, 1.65rem);
   font-style: italic;
   font-weight: 300;
