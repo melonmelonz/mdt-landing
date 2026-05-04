@@ -2,3 +2,7 @@
 Thumbs.db
 *.log
 .wrangler/
+
+# Local letter artifacts — never commit
+*.pdf
+letterhead.html

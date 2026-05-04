@@ -24,7 +24,12 @@
       <a href="#" class="nav-logo" aria-label="MDT home">
         <img src="logo.svg" alt="MDT — Maud'dib Tek" class="nav-logo-img" height="36">
       </a>
-      <ul class="nav-links" role="list">
+      <button id="nav-toggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <ul id="nav-links" class="nav-links" role="list">
         <li><a href="#services">Services</a></li>
         <li><a href="#approach">Approach</a></li>
         <li><a href="#stack">Stack</a></li>
@@ -189,23 +194,18 @@
       <div class="contact-block reveal">
         <div class="contact-item">
           <span class="contact-label">Email</span>
-          <a href="mailto:hello@mauddibtek.com" class="contact-val">hello@mauddibtek.com</a>
+          <a href="mailto:hello@mdibtek.com" class="contact-val">hello@mdibtek.com</a>
         </div>
         <div class="contact-divider" aria-hidden="true"></div>
         <div class="contact-item">
           <span class="contact-label">Phone</span>
-          <a href="tel:+18887991724" class="contact-val">+1 (888) 799-1724</a>
+          <span class="contact-val contact-plain">Twilio coming soon — email for now</span>
         </div>
         <div class="contact-divider" aria-hidden="true"></div>
         <div class="contact-item">
           <span class="contact-label">Location</span>
           <span class="contact-val contact-plain">Remote · Available Worldwide</span>
         </div>
-      </div>
-
-      <div class="contact-links reveal">
-        <a href="#" class="contact-link" aria-label="LinkedIn">LinkedIn</a>
-        <a href="#" class="contact-link" aria-label="GitHub">GitHub</a>
       </div>
     </div>
   </section>

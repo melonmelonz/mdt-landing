@@ -164,3 +164,41 @@
     });
   });
 }());
+
+
+/* ── Mobile nav toggle ── */
+(function () {
+  const toggle = document.getElementById('nav-toggle');
+  const links  = document.getElementById('nav-links');
+  if (!toggle || !links) return;
+
+  function close() {
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open menu');
+    links.classList.remove('open');
+  }
+
+  function open() {
+    toggle.setAttribute('aria-expanded', 'true');
+    toggle.setAttribute('aria-label', 'Close menu');
+    links.classList.add('open');
+  }
+
+  toggle.addEventListener('click', () => {
+    if (toggle.getAttribute('aria-expanded') === 'true') close();
+    else open();
+  });
+
+  // Close on link tap
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+
+  // Close if window resized above breakpoint
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 600) close();
+  }, { passive: true });
+}());
